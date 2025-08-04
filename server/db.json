@@ -1,0 +1,59 @@
+[
+  {
+    "title": "חופשה בברצלונה",
+    "description": "סיורים מודרכים, ים, אוכל טוב ואווירה ים תיכונית",
+    "passengers": "2",
+    "startDate": "2025-08-07",
+    "endDate": "2025-08-11",
+    "nights": 4,
+    "days": 5,
+    "price": "4870",
+    "carRental": true,
+    "cityImages": [
+      "https://picsum.photos/seed/w53upw/600/400",
+      "https://picsum.photos/seed/x6v8m9/600/400",
+      "https://picsum.photos/seed/1rq0jq/600/400",
+      "https://picsum.photos/seed/906xt2/600/400",
+      "https://picsum.photos/seed/vx9zgv/600/400"
+    ],
+    "hotelImages": [
+      "https://picsum.photos/seed/c7u6ps/600/400",
+      "https://picsum.photos/seed/qvn9fz/600/400",
+      "https://picsum.photos/seed/0o4jng/600/400",
+      "https://picsum.photos/seed/dialeg/600/400",
+      "https://picsum.photos/seed/tfutri/600/400"
+    ],
+    "flightDetails": {
+      "flights": [
+        {
+          "date": "2025-08-07",
+          "airline": "El Al",
+          "departure": "10:30",
+          "arrival": "13:45",
+          "baggageIncluded": true,
+          "baggageWeight": "23"
+        },
+        {
+          "date": "2025-08-11",
+          "airline": "El Al",
+          "departure": "20:00",
+          "arrival": "23:15",
+          "baggageIncluded": true,
+          "baggageWeight": "23"
+        }
+      ]
+    },
+    "hotel": {
+      "name": "Hotel Barcelona Central",
+      "rating": "9.1",
+      "distance": "1.0",
+      "note": "כולל ארוחת בוקר"
+    },
+    "carDetails": {
+      "company": "Europcar",
+      "description": "רכב משפחתי אוטומטי",
+      "rentalDays": "5"
+    },
+    "id": "1754317615761"
+  }
+]
