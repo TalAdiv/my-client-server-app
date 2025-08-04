@@ -1,0 +1,547 @@
+
+  
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+footer {
+  background-color: #b9d7ff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 20px;
+  position: sticky;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: relative; /* לא sticky יותר */
+  background-color: #b9d7ff;
+  height: 230px;
+  width: 85%;
+  margin: 0 auto; 
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.header-stub {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 10px;
+  background-color: #b9d7ff;
+  z-index: 1000;
+  border-radius: 0 0 15px 15px;
+  box-sizing: border-box;
+}
+/* כדי לאפשר לתוכן לגלוש מתחת ל-header, אין padding/margin על body או main שמדחיק את התוכן מתחת ל-header */
+/* אפשר להוסיף padding-top לתוכן שמתחת אם רוצים שיתחיל מתחת ל-header במצב רגיל */
+
+/* דוגמה לתוכן מתחת */
+main {
+  position: relative;
+  z-index: 0;           /* מתחת ל-header */
+  margin-top: -40px;     /* מתזז את התוכן מעלה - מחלק מה-header נשאר גלוי */
+  padding-top: 50px;    /* מספיקה כדי שהתוכן לא יהיה מוסתר לגמרי מתחת ל-header */
+}
+
+
+
+.logo {
+  height: 200px;
+  
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  display: block;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 15px
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #1a55a4;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  user-select: none;
+}
+
+nav a:hover,
+nav a.active {
+  background: linear-gradient(90deg, #1a55a4, #4ea8ff);
+  color: #1a55a4;
+}
+
+/* ===== MAIN ===== */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* ===== BUTTONS ===== */
+button,
+button[type="submit"] {
+  background-color: #1a55a4;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: inherit;
+}
+
+button:hover,
+button[type="submit"]:hover {
+  background-color: #b9d7ff;
+  color: #1a55a4;
+}
+
+/* ===== CARDS ===== */
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 40%;
+  padding: 1em 1.5em 1.5em 1.5em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  margin: 1em auto;
+}
+
+.card h3 {
+  margin-top: 0.8em;
+  font-size: 1.2em;
+  color: #00224f;
+  text-align: center;
+}
+
+.card p {
+  margin: 0.5em 0 1em 0;
+  color: #333;
+  text-align: center
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FORM ===== */
+form {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: right;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ===== GROUPS ===== */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 120px;
+}
+
+.form-group.small-input {
+  flex: 0 0 100px;
+}
+
+.form-group.checkbox-input {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.form-group.checkbox-input input {
+  width: auto;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.logo {
+  height: 200px;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a55a4;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  user-select: none;
+}
+
+nav a:hover,
+nav a.active {
+  background: linear-gradient(90deg, #1a55a4, #4ea8ff);
+  color: white;
+}
+
+/* ===== MAIN ===== */
+main {
+ 
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* ===== BUTTONS ===== */
+button,
+button[type="submit"] {
+  background-color: #1a55a4;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: inherit;
+}
+
+button:hover,
+button[type="submit"]:hover {
+  background-color: #b9d7ff;
+  color: #1a55a4;
+}
+
+
+/* ===== TRIP DETAILS ===== */
+.trip-details-container {
+  max-width: 960px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.section-box {
+  background: #dcebff;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 12px;
+  position: relative;
+  text-align: right;
+  box-sizing: border-box;
+}
+.section-box1 {
+  background: #dcebff;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 12px;
+  position: relative;
+  text-align: right;
+  box-sizing: border-box;
+  width: 47%;
+  flex: 1 1 47%;
+}
+.section-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;          /* רווח בין הקופסאות */
+  flex-wrap: wrap;  /* כדי שברוחב קטן יעברו שורה תחת שורה */
+}
+.image-grid-rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+ 
+  align-items: flex-start;
+}
+
+.destination-image,
+.hotel-image {
+  width: 19%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.destination-image:hover,
+.hotel-image:hover {
+  transform: scale(1.05);
+}
+
+.flight-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 200px;
+   text-align: left;
+}
+
+.flight-card {
+  background: #f0f6ff;
+  border-radius: 20px;
+  padding: 1em 1.2em;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  flex: 1 1 48%;
+  box-sizing: border-box;
+  min-width: 280px;
+  height: 200px;
+  display: flex;
+  gap: 15px; /* רווח בין אלמנטים */
+  align-items: flex-start;
+}
+
+.icon-container {
+  position: relative;
+  right: 20px;
+  top: -10px;
+  width: 140px;
+  height: 140px;
+  
+}
+
+
+.icon-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info-list {
+  list-style: none;
+  
+  text-align: right;
+ 
+}
+.info-list-flight {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  /* אין צורך ב-inline-block כאן */
+  flex: 1; /* אם רוצים שיתפוס מקום זמין */
+}
+
+.info-list li {
+  margin-bottom: 0.5em;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1a55a4;
+}
+
+.car-info {
+  text-align: right;
+  margin-top: 0.5em;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 2em auto;
+  max-width: 600px;
+}
+
+.delete-button:hover {
+  background-color: #b30000;
+}
+#icon-car {
+  width: 120px;
+  height: 120px;
+  object-fit: inherit;
+  margin-right: 10px;
+}
+#icon-flight-back, #icon-flight-go {
+  width: 250px;
+  height: 250px;
+  object-fit: inherit;
+  margin-right: -70px;
+  top: -10px;
+  margin: -50px;
+}
+/* ===== מודאל תמונה מוגדלת ===== */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 6px solid white;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+.section-box2 {
+  background: rgb(215, 215, 215);
+  padding: 1.5em;
+  margin: 0 auto 1.5em auto; /* שורה זו מרכזת את הקופסה */
+  border-radius: 12px;
+  position: relative;
+  text-align: right; /* טקסט מיושר לימין */
+  box-sizing: border-box;
+  width: 47%;
+  
+
+}
+

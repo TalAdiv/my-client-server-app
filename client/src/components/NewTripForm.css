@@ -1,0 +1,81 @@
+.trip-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  font-family: sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.form-subsection {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="file"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inline-info {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.form-actions button {
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background-color: #005fa3;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}

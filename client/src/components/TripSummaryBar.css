@@ -1,0 +1,20 @@
+.trip-summary-bar {
+  position: sticky;
+  top: 20px; /* או כל ערך שמתאים לך */
+  background-color: #eaf4ff;
+  color: #1a55a4;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  z-index: 9999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  border-bottom: 1px solid #c0d8f0;
+  border-radius: 10px;
+}
+
+
+/* אפשרות 2: שימוש ב־margin-top (אם הוא לא sticky) */
+/* אם הוא במיקום רגיל במסמך (כ */
+
+
